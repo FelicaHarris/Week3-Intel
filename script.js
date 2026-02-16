@@ -55,7 +55,7 @@ document.querySelectorAll('.timeline-card').forEach((card, idx) => {
   // Handle click events
   card.addEventListener('click', (e) => {
     // avoid toggling when interacting with form controls inside
-    if (e.target.closest('button') || e.target.closest('input') || e.target.tagName === 'A') return;
+    if (e.target.closest('input') || e.target.tagName === 'A') return;
     toggleCard(card, desc);
   });
   
