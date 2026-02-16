@@ -1,4 +1,22 @@
 /* Add your CSS here */
+
+/* Accessibility: Skip link - visible only when focused */
+.skip-link{
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #0a66c2;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 0 0 6px 0;
+  z-index: 100;
+}
+
+.skip-link:focus{
+  top: 0;
+}
+
 /* Basic page layout and fonts */
 body{
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
@@ -71,13 +89,14 @@ section{
 .timeline-card{
 	cursor: pointer;
 	position: relative;
+	will-change: opacity;
 }
 
 .timeline-card .desc{
 	max-height: 0;
 	overflow: hidden;
 	opacity: 0;
-	transition: max-height 0.28s ease, opacity 0.25s ease, padding 0.2s ease;
+	transition: max-height 0.28s ease, opacity 0.25s ease;
 	margin: 0;
 }
 
@@ -85,6 +104,11 @@ section{
 	max-height: 400px;
 	opacity: 1;
 	margin-top: 8px;
+}
+
+/* Prevent layout shift from expanding cards by using contain */
+.timeline-card {
+	contain: layout style paint;
 }
 
 /* Simple indicator */
@@ -127,13 +151,55 @@ button{
 	padding: 8px 12px;
 	border-radius: 6px;
 	cursor: pointer;
+	/* Accessibility: clear focus indicator for keyboard navigation */
+	transition: outline-offset 0.2s ease;
 }
 
-button:hover{opacity:0.95}
+button:hover{
+	opacity: 0.95;
+}
+
+/* Accessibility: visible focus indicator for keyboard users */
+button:focus,
+input:focus,
+label input:focus,
+.timeline-card:focus{
+	outline: 3px solid #0a66c2;
+	outline-offset: 2px;
+}
+
+/* Timeline card button styles */
+.timeline-card{
+	text-align: left;
+	padding: 12px;
+}
+
+.timeline-card:hover{
+	opacity: 0.95;
+}
 
 input[type="range"]{ width:100%; margin:8px 0; }
 
-label{ display:block; margin:6px 0 }
+label{ 
+	display: block; 
+	margin: 6px 0;
+}
+
+/* Accessibility: Legend styling for radio button groups */
+legend{
+	font-weight: 600;
+	margin-top: 12px;
+}
+
+/* Timeline instructions styling */
+.timeline-instructions{
+	font-size: 0.95rem;
+	margin: 8px 0 12px 0;
+	padding: 8px;
+	background: rgba(10, 102, 194, 0.1);
+	border-left: 4px solid #0a66c2;
+	border-radius: 4px;
+}
 
 /* Dark theme (toggled by JS) */
 body.dark{

@@ -47,30 +47,41 @@ quizForm.addEventListener('submit', (ev) => {
     (score === 3 ? 'Great job! 🎉' : score >= 1 ? 'Good try — learn and improve!' : 'Try again — small changes add up.');
 });
 
-// Toggle timeline descriptions on click or keyboard (Enter/Space)
-document.querySelectorAll('.timeline-card').forEach((card, idx) => {
-  const desc = card.querySelector('.desc');
-  if(desc) desc.setAttribute('aria-hidden', 'true');
+// Cache DOM queries for better performance
+const timelineCards = document.querySelectorAll('.timeline-card');
+const descriptionMap = new Map();
 
+// Initialize descriptions and map them to cards
+timelineCards.forEach((card) => {
+  const desc = card.querySelector('.desc');
+  if(desc) {
+    desc.setAttribute('aria-hidden', 'true');
+    descriptionMap.set(card, desc);
+  }
+});
+
+// Handle click and keyboard events for timeline cards
+timelineCards.forEach((card) => {
   // Handle click events
   card.addEventListener('click', (e) => {
     // avoid toggling when interacting with form controls inside
     if (e.target.closest('button') || e.target.closest('input') || e.target.tagName === 'A') return;
-    toggleCard(card, desc);
+    toggleCard(card);
   });
   
   // Handle keyboard events (Enter and Space)
   card.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault(); // prevent page scroll from Space key
-      toggleCard(card, desc);
+      toggleCard(card);
     }
   });
 });
 
 // Helper function to toggle card expanded state
-function toggleCard(card, desc) {
+function toggleCard(card) {
   const expanded = card.classList.toggle('expanded');
+  const desc = descriptionMap.get(card);
   if(desc) desc.setAttribute('aria-hidden', expanded ? 'false' : 'true');
   card.setAttribute('aria-expanded', expanded ? 'true' : 'false');
 }

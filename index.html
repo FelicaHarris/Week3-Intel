@@ -3,16 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Intel: Sustainability Through the Ages</title>
+  <title>Intel Sustainability Timeline | Environmental Commitment 2024</title>
+  
+  <!-- SEO: Meta Description (155-160 characters for optimal display) -->
+  <meta name="description" content="Explore Intel's sustainability journey from 1968 to 2024. Discover Intel's commitment to climate action, renewable energy, and net-zero emissions by 2040." />
+  
+  <!-- SEO: Keywords -->
+  <meta name="keywords" content="Intel sustainability, environmental commitment, renewable energy, net-zero emissions, climate action, semiconductor manufacturing" />
+  
+  <!-- SEO: Canonical URL (helps prevent duplicate content issues) -->
+  <link rel="canonical" href="https://intel-sustainability.example.com" />
+  
+  <!-- SEO: Open Graph tags for social media sharing -->
+  <meta property="og:title" content="Intel Sustainability Through the Ages" />
+  <meta property="og:description" content="Explore Intel's sustainability journey and commitment to environmental responsibility from 1968 to 2024." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/intel-header-logo.svg" />
+  <meta property="og:image:alt" content="Intel Logo" />
+  
+  <!-- SEO: Twitter Card tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Intel Sustainability Through the Ages" />
+  <meta name="twitter:description" content="Discover how Intel is leading the way toward sustainability and net-zero emissions." />
+  
+  <!-- SEO: Author and robots directives -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="author" content="Intel" />
+  
+  <!-- Preconnect to CDN for faster loading -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <!-- Bootstrap CSS for responsive grid system and RTL support -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Skip Link: helps keyboard users jump to main content -->
+  <a href="#timeline" class="skip-link">Skip to main content</a>
 
   <!-- Header / Hero Section -->
   <header>
     <div>
       <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
+      <!-- Header logo: load immediately (above fold) -->
+      <img src="img/intel-header-logo.svg" alt="Intel Logo" width="48" height="48" />
       <!-- Main Heading -->
       <h1>
         Sustainability Through the Ages
@@ -28,13 +62,17 @@
   </header>
 
   <!-- Timeline Cards Section -->
+  <!-- Instructions for all users: help text for interactive timeline -->
+  <p class="timeline-instructions">
+    <strong>Timeline:</strong> Click or press Enter on any card to reveal more information. Cards are interactive.
+  </p>
   <section id="timeline" class="cards">
 
     <!-- Card 1: 1968 -->
-    <div class="card timeline-card">
+    <button class="card timeline-card" role="button" tabindex="0" aria-expanded="false" aria-label="1968: Intel Founded - Click to expand details">
       <h2>1968</h2>
       <h3>Intel Founded</h3>
-      <img src="img/1.jpg" alt="Intel Founded" />
+      <img src="img/1.jpg" alt="Intel Founded" width="280" height="200" loading="lazy" />
       <!-- Add image -->
       <p class="desc">
         Robert Noyce and Gordon Moore rename the newly formed company 
@@ -44,10 +82,10 @@
     </div>
 
     <!-- Card 2: 1971 -->
-    <div class="card timeline-card">
+    <button class="card timeline-card" role="button" tabindex="0" aria-expanded="false" aria-label="1971: First Microprocessor - Click to expand details">
       <h2>1971</h2>
       <h3>First Microprocessor</h3>
-      <img src="img/2.jpg" alt="First Microprocessor" />
+      <img src="img/2.jpg" alt="First Microprocessor" width="280" height="200" loading="lazy" />
       <!-- Add image -->
       <p class="desc">
         Intel debuts the 4004, the world's first commercial microprocessor, 
@@ -57,10 +95,10 @@
     </div>
 
     <!-- Card 3: 1978 -->
-    <div class="card timeline-card">
+    <button class="card timeline-card" role="button" tabindex="0" aria-expanded="false" aria-label="1978: 8086 Processor - Click to expand details">
       <h2>1978</h2>
       <h3>8086 Processor</h3>
-      <img src="img/3.jpg" alt="8086 Processor" />
+      <img src="img/3.jpg" alt="8086 Processor" width="280" height="200" loading="lazy" />
       <!-- Add image -->
       <p class="desc">
         Launch of the 8086 processor, establishing the x86 architecture 
@@ -69,10 +107,10 @@
     </div>
 
     <!-- Card 4: 1985 -->
-    <div class="card timeline-card">
+    <button class="card timeline-card" role="button" tabindex="0" aria-expanded="false" aria-label="1985: 386 Processor - Click to expand details">
       <h2>1985</h2>
       <h3>386 Processor</h3>
-      <img src="img/4.jpg" alt="386 Processor" />
+      <img src="img/4.jpg" alt="386 Processor" width="280" height="200" loading="lazy" />
       <!-- Add image -->
       <p class="desc">
         Intel introduces the 386 processor with 32-bit architecture, 
@@ -82,10 +120,10 @@
     </div>
 
     <!-- Card 5: 2006 -->
-    <div class="card timeline-card">
+    <button class="card timeline-card" role="button" tabindex="0" aria-expanded="false" aria-label="2006: Peak GHG Emissions - Click to expand details">
       <h2>2006</h2>
       <h3>Peak GHG Emissions</h3>
-      <img src="img/transportation-wind.jpg" alt="Peak GHG Emissions" />
+      <img src="img/transportation-wind.jpg" alt="Peak GHG Emissions" width="280" height="200" loading="lazy" />
       <p class="desc">
         This year marks Intel's highest annual greenhouse gas emissions 
         for operations. Over subsequent years, Intel invests heavily in 
@@ -95,10 +133,10 @@
     </div>
 
     <!-- Card 6: 2020 -->
-    <div class="card timeline-card">
+    <button class="card timeline-card" role="button" tabindex="0" aria-expanded="false" aria-label="2020: RISE Strategy - Click to expand details">
       <h2>2020</h2>
       <h3>RISE Strategy</h3>
-      <img src="img/GPTimg6.png" alt="RISE Strategy" />
+      <img src="img/GPTimg6.png" alt="RISE Strategy" width="280" height="200" loading="lazy" />
       <p class="desc">
         Intel launches its RISE (Responsible, Inclusive, Sustainable, 
         Enabling) strategy and 2030 goals, aiming to drive industry-wide 
@@ -107,10 +145,10 @@
     </div>
 
     <!-- Card 7: 2022 -->
-    <div class="card timeline-card">
+    <button class="card timeline-card" role="button" tabindex="0" aria-expanded="false" aria-label="2022: Net-Zero By 2040 - Click to expand details">
       <h2>2022</h2>
       <h3>Net-Zero By 2040</h3>
-      <img src="img/img7.png" alt="Net-Zero By 2040" />
+      <img src="img/img7.png" alt="Net-Zero By 2040" width="280" height="200" loading="lazy" />
       <p class="desc">
         Intel announces its commitment to achieve net-zero greenhouse 
         gas emissions (Scope 1 and 2) across its global operations 
@@ -119,10 +157,10 @@
     </div>
 
     <!-- Card 8: 2023 -->
-    <div class="card timeline-card">
+    <button class="card timeline-card" role="button" tabindex="0" aria-expanded="false" aria-label="2023: Renewable Electricity - Click to expand details">
       <h2>2023</h2>
       <h3>Renewable Electricity</h3>
-      <img src="img/img8.png" alt="Renewable Electricity" />
+      <img src="img/img8.png" alt="Renewable Electricity" width="280" height="200" loading="lazy" />
       <p class="desc">
         The company achieves 99% renewable electricity usage worldwide, 
         helping to drastically lower carbon emissions and driving progress 
@@ -131,51 +169,103 @@
     </div>
 
     <!-- Card 9: 2024 -->
-    <div class="card timeline-card">
+    <button class="card timeline-card" role="button" tabindex="0" aria-expanded="false" aria-label="2024: Sustainability Summit - Click to expand details">
       <h2>2024</h2>
       <h3>Sustainability Summit</h3>
-      <img src="img/img9.png" alt="Sustainability Summit" />
+      <img src="img/img9.png" alt="Sustainability Summit" width="280" height="200" loading="lazy" />
       <p class="desc">
         Intel hosts its first Sustainability Summit, uniting suppliers, 
         government officials, and industry leaders to collaborate on 
         next-generation sustainable semiconductor manufacturing.
       </p>
+    </button>
+  </section>
+
+  <!-- Three-Column Grid Section: Sustainability Pillars -->
+  <section id="pillars" class="container my-5">
+    <h2 class="text-center mb-4">Intel's Sustainability Pillars</h2>
+    
+    <!-- Bootstrap Grid: 3 responsive columns -->
+    <div class="row">
+      <!-- Column 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="img/transportation-wind.jpg" class="card-img-top" alt="Climate Action" width="400" height="200" loading="lazy" />
+          <div class="card-body">
+            <h5 class="card-title">Climate Action</h5>
+            <p class="card-text">
+              Reducing greenhouse gas emissions through renewable energy 
+              adoption and efficient manufacturing processes worldwide.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="img/1.jpg" class="card-img-top" alt="Water Stewardship" width="400" height="200" loading="lazy" />
+          <div class="card-body">
+            <h5 class="card-title">Water Stewardship</h5>
+            <p class="card-text">
+              Protecting water resources by reducing consumption and 
+              improving water quality in all manufacturing facilities.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="img/2.jpg" class="card-img-top" alt="Waste Reduction" width="400" height="200" loading="lazy" />
+          <div class="card-body">
+            <h5 class="card-title">Waste Reduction</h5>
+            <p class="card-text">
+              Minimizing waste to landfill and promoting circular economy 
+              practices across the entire supply chain.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-  <p>Scroll to view timeline | Hover over cards to learn more!</p>
 
   <!-- Interactive Section: theme toggle, footprint slider, simple quiz -->
   <section id="interactive">
     <div class="controls">
-      <button id="themeToggle">Toggle Theme</button>
+      <!-- Button with descriptive aria-label for screen readers -->
+      <button id="themeToggle" aria-label="Toggle between light and dark theme">Toggle Theme</button>
     </div>
 
     <div id="footprint" class="card">
       <h2>Estimate Weekly Transport CO2</h2>
       <label for="kmRange">Kilometers driven per week: <span id="kmValue">0</span> km</label>
-      <input type="range" id="kmRange" min="0" max="1000" value="0" />
-      <p>Estimated CO2: <strong id="co2Estimate">0</strong> kg/week</p>
+      <input type="range" id="kmRange" min="0" max="1000" value="0" aria-describedby="co2Estimate" />
+      <p id="co2Output" aria-live="polite" aria-atomic="true">
+        Estimated CO2: <strong id="co2Estimate">0</strong> kg/week
+      </p>
     </div>
 
     <div id="quiz" class="card">
       <h2>Quick Sustainability Quiz</h2>
       <form id="quizForm">
         <div class="q">
-          <p>1) Which action reduces home energy use most?</p>
+          <legend>1) Which action reduces home energy use most?</legend>
           <label><input type="radio" name="q1" value="0"> Keeping thermostat high</label>
           <label><input type="radio" name="q1" value="1"> Upgrading to LED bulbs</label>
           <label><input type="radio" name="q1" value="0"> Leaving lights on</label>
         </div>
 
         <div class="q">
-          <p>2) Which is renewable energy?</p>
+          <legend>2) Which is renewable energy?</legend>
           <label><input type="radio" name="q2" value="1"> Solar</label>
           <label><input type="radio" name="q2" value="0"> Coal</label>
           <label><input type="radio" name="q2" value="0"> Natural gas</label>
         </div>
 
         <div class="q">
-          <p>3) Which reduces waste?</p>
+          <legend>3) Which reduces waste?</legend>
           <label><input type="radio" name="q3" value="1"> Reuse & compost</label>
           <label><input type="radio" name="q3" value="0"> Single-use plastics</label>
           <label><input type="radio" name="q3" value="0"> Littering</label>
@@ -183,11 +273,44 @@
 
         <button type="submit">Submit Quiz</button>
       </form>
-      <p id="quizResult" aria-live="polite"></p>
+      <p id="quizResult" aria-live="polite" aria-atomic="true"></p>
     </div>
   </section>
 
-  <!-- Link the interactive JavaScript -->
-  <script src="script.js"></script>
+  <!-- SEO: Structured Data (Schema.org JSON-LD) for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Intel Sustainability Through the Ages",
+    "description": "Explore Intel's sustainability journey and commitment to environmental responsibility from 1968 to 2024.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Intel",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "img/intel-header-logo.svg",
+        "width": 48,
+        "height": 48
+      }
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "img/intel-header-logo.svg",
+      "width": 48,
+      "height": 48
+    },
+    "mainEntity": {
+      "@type": "Event",
+      "name": "Intel's Sustainability Journey",
+      "description": "A timeline of Intel's environmental and sustainability milestones from 1968 to 2024",
+      "startDate": "1968",
+      "endDate": "2024"
+    }
+  }
+  </script>
+
+  <!-- Link the interactive JavaScript (deferred for better performance) -->
+  <script src="script.js" defer></script>
 </body>
 </html>
