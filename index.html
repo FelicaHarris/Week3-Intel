@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intel: Sustainability Through the Ages</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header / Hero Section -->
+  <header>
+    <div>
+      <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
+      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
+      <!-- Main Heading -->
+      <h1>
+        Sustainability Through the Ages
+      </h1>
+
+      <!-- Subheading / Description -->
+      <p>
+        Explore Intel's journey through time, discovering how our commitment
+        to innovation has shaped a more sustainable future for technology 
+        and our planet.
+      </p>
+    </div>
+  </header>
+
+  <!-- Timeline Cards Section -->
+  <section id="timeline" class="cards">
+
+    <!-- Card 1: 1968 -->
+    <div class="card timeline-card">
+      <h2>1968</h2>
+      <h3>Intel Founded</h3>
+      <img src="img/1.jpg" alt="Intel Founded" />
+      <!-- Add image -->
+      <p class="desc">
+        Robert Noyce and Gordon Moore rename the newly formed company 
+        NM Electronics to Intel Corporation, laying the foundation for 
+        decades of technological innovation.
+      </p>
+    </div>
+
+    <!-- Card 2: 1971 -->
+    <div class="card timeline-card">
+      <h2>1971</h2>
+      <h3>First Microprocessor</h3>
+      <img src="img/2.jpg" alt="First Microprocessor" />
+      <!-- Add image -->
+      <p class="desc">
+        Intel debuts the 4004, the world's first commercial microprocessor, 
+        igniting the microprocessor revolution and propelling the future 
+        of computing devices.
+      </p>
+    </div>
+
+    <!-- Card 3: 1978 -->
+    <div class="card timeline-card">
+      <h2>1978</h2>
+      <h3>8086 Processor</h3>
+      <img src="img/3.jpg" alt="8086 Processor" />
+      <!-- Add image -->
+      <p class="desc">
+        Launch of the 8086 processor, establishing the x86 architecture 
+        that drives countless PCs and servers in the modern era.
+      </p>
+    </div>
+
+    <!-- Card 4: 1985 -->
+    <div class="card timeline-card">
+      <h2>1985</h2>
+      <h3>386 Processor</h3>
+      <img src="img/4.jpg" alt="386 Processor" />
+      <!-- Add image -->
+      <p class="desc">
+        Intel introduces the 386 processor with 32-bit architecture, 
+        ushering in a new era of performance and multitasking for 
+        personal computers.
+      </p>
+    </div>
+
+    <!-- Card 5: 2006 -->
+    <div class="card timeline-card">
+      <h2>2006</h2>
+      <h3>Peak GHG Emissions</h3>
+      <img src="img/transportation-wind.jpg" alt="Peak GHG Emissions" />
+      <p class="desc">
+        This year marks Intel's highest annual greenhouse gas emissions 
+        for operations. Over subsequent years, Intel invests heavily in 
+        chemical abatement, renewable energy, and energy-efficient 
+        manufacturing to reverse this trend.
+      </p>
+    </div>
+
+    <!-- Card 6: 2020 -->
+    <div class="card timeline-card">
+      <h2>2020</h2>
+      <h3>RISE Strategy</h3>
+      <img src="img/GPTimg6.png" alt="RISE Strategy" />
+      <p class="desc">
+        Intel launches its RISE (Responsible, Inclusive, Sustainable, 
+        Enabling) strategy and 2030 goals, aiming to drive industry-wide 
+        progress on climate action, water stewardship, and waste reduction.
+      </p>
+    </div>
+
+    <!-- Card 7: 2022 -->
+    <div class="card timeline-card">
+      <h2>2022</h2>
+      <h3>Net-Zero By 2040</h3>
+      <img src="img/img7.png" alt="Net-Zero By 2040" />
+      <p class="desc">
+        Intel announces its commitment to achieve net-zero greenhouse 
+        gas emissions (Scope 1 and 2) across its global operations 
+        by 2040, building on years of environmental initiatives.
+      </p>
+    </div>
+
+    <!-- Card 8: 2023 -->
+    <div class="card timeline-card">
+      <h2>2023</h2>
+      <h3>Renewable Electricity</h3>
+      <img src="img/img8.png" alt="Renewable Electricity" />
+      <p class="desc">
+        The company achieves 99% renewable electricity usage worldwide, 
+        helping to drastically lower carbon emissions and driving progress 
+        toward Intel's long-term sustainability goals.
+      </p>
+    </div>
+
+    <!-- Card 9: 2024 -->
+    <div class="card timeline-card">
+      <h2>2024</h2>
+      <h3>Sustainability Summit</h3>
+      <img src="img/img9.png" alt="Sustainability Summit" />
+      <p class="desc">
+        Intel hosts its first Sustainability Summit, uniting suppliers, 
+        government officials, and industry leaders to collaborate on 
+        next-generation sustainable semiconductor manufacturing.
+      </p>
+    </div>
+  </section>
+  <p>Scroll to view timeline | Hover over cards to learn more!</p>
+
+  <!-- Interactive Section: theme toggle, footprint slider, simple quiz -->
+  <section id="interactive">
+    <div class="controls">
+      <button id="themeToggle">Toggle Theme</button>
+    </div>
+
+    <div id="footprint" class="card">
+      <h2>Estimate Weekly Transport CO2</h2>
+      <label for="kmRange">Kilometers driven per week: <span id="kmValue">0</span> km</label>
+      <input type="range" id="kmRange" min="0" max="1000" value="0" />
+      <p>Estimated CO2: <strong id="co2Estimate">0</strong> kg/week</p>
+    </div>
+
+    <div id="quiz" class="card">
+      <h2>Quick Sustainability Quiz</h2>
+      <form id="quizForm">
+        <div class="q">
+          <p>1) Which action reduces home energy use most?</p>
+          <label><input type="radio" name="q1" value="0"> Keeping thermostat high</label>
+          <label><input type="radio" name="q1" value="1"> Upgrading to LED bulbs</label>
+          <label><input type="radio" name="q1" value="0"> Leaving lights on</label>
+        </div>
+
+        <div class="q">
+          <p>2) Which is renewable energy?</p>
+          <label><input type="radio" name="q2" value="1"> Solar</label>
+          <label><input type="radio" name="q2" value="0"> Coal</label>
+          <label><input type="radio" name="q2" value="0"> Natural gas</label>
+        </div>
+
+        <div class="q">
+          <p>3) Which reduces waste?</p>
+          <label><input type="radio" name="q3" value="1"> Reuse & compost</label>
+          <label><input type="radio" name="q3" value="0"> Single-use plastics</label>
+          <label><input type="radio" name="q3" value="0"> Littering</label>
+        </div>
+
+        <button type="submit">Submit Quiz</button>
+      </form>
+      <p id="quizResult" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- Link the interactive JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
