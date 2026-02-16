@@ -252,3 +252,10 @@ body.dark .card{ background:#081427; box-shadow:none }
 .footer-links{ list-style: none; padding: 0; margin: 0; display: flex; gap: 12px; justify-content: flex-end; }
 .footer-links li{ display: inline }
 .site-footer p{ margin: 0 }
+
+/* RTL support tweaks applied when body.rtl is present */
+.rtl{ direction: rtl; }
+.rtl .timeline-card::after{ left: 12px; right: auto; }
+.rtl .timeline-card.expanded::after{ transform: rotate(-90deg); }
+.rtl header > div{ text-align: center; }
+.rtl .text-md-end{ text-align: left !important; }
