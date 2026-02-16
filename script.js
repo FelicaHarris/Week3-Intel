@@ -74,3 +74,23 @@ function toggleCard(card, desc) {
   if(desc) desc.setAttribute('aria-hidden', expanded ? 'false' : 'true');
   card.setAttribute('aria-expanded', expanded ? 'true' : 'false');
 }
+
+// Handle subscription form submission (simple client-side UX)
+const subscriptionForm = document.getElementById('subscriptionForm');
+const subscriptionMessage = document.getElementById('subscriptionMessage');
+if(subscriptionForm){
+  subscriptionForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    // Example: client-side validation and friendly message
+    if(!email || !email.includes('@')){
+      subscriptionMessage.textContent = 'Please enter a valid email address.';
+      subscriptionMessage.style.color = '#b02a37';
+      return;
+    }
+    // In a real app, submit to server here. We'll just show a success message.
+    subscriptionMessage.textContent = 'Thanks — you are subscribed! Check your email for confirmation.';
+    subscriptionMessage.style.color = '#0a6a2a';
+    subscriptionForm.reset();
+  });
+}

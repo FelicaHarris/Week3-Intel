@@ -135,6 +135,29 @@ section{
 	margin: 12px 0;
 }
 
+/* Subscription form styling */
+#subscription input[type="email"]{
+	width: 100%;
+	padding: 8px;
+	margin: 8px 0 12px 0;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+}
+
+.subscribe-btn{
+	background: #198754; /* green */
+	border: none;
+	color: white;
+	padding: 8px 12px;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+#subscriptionMessage{
+	margin-top: 8px;
+	color: #0a6a2a;
+}
+
 /* Interactive area layout */
 #interactive{
 	margin-top: 20px;
