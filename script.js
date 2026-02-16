@@ -100,3 +100,16 @@ if(subscriptionForm){
    - Exposes `setPageLanguage(lang)` to programmatically change language
 */
 /* Language/direction handling removed per request. */
+
+// Manual language setter: call `setLanguage('ar')` to set RTL, or `setLanguage('en')` for LTR
+function setLanguage(lang){
+  if(!lang) return;
+  document.documentElement.lang = lang;
+  const code = String(lang).split('-')[0].toLowerCase();
+  const rtlLangs = new Set(['ar','he','fa','ur','ps','syr','dv']);
+  const rtl = rtlLangs.has(code);
+  document.documentElement.dir = rtl ? 'rtl' : 'ltr';
+  document.body.classList.toggle('rtl', rtl);
+  document.dispatchEvent(new CustomEvent('page-language-changed', { detail: { lang, dir: rtl ? 'rtl' : 'ltr' } }));
+}
+window.setLanguage = setLanguage;
