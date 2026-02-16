@@ -238,3 +238,17 @@ body.dark .card{ background:#081427; box-shadow:none }
 	#interactive{ display:flex; gap:16px }
 	#footprint, #quiz{ flex:1 }
 }
+
+/* Footer styling */
+.site-footer{
+	background: #0b2540;
+	color: #dfeffb;
+	padding: 16px;
+	margin-top: 24px;
+	border-radius: 8px;
+}
+.site-footer a{ color:#bcdffb; text-decoration:none }
+.site-footer a:hover{ text-decoration:underline }
+.footer-links{ list-style: none; padding: 0; margin: 0; display: flex; gap: 12px; justify-content: flex-end; }
+.footer-links li{ display: inline }
+.site-footer p{ margin: 0 }
